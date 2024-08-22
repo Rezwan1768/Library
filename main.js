@@ -27,10 +27,10 @@ myLibrary.forEach(book =>
 //----------------------------Dispaly books--------------------------------
 
 function displayBooks() {
-    const table = document.querySelector("table");
+    const tableBody = document.querySelector("table tbody");
     myLibrary.forEach(book => {
         const bookEntry = createBookEntry(book);
-        table.appendChild(bookEntry);
+        tableBody.appendChild(bookEntry);
     });
 }
 
@@ -46,19 +46,29 @@ function createBookEntry(book) {
 }
 
 function createDataCell(key, value) {
-    const rowData = document.createElement("td");
+    const cellData = document.createElement("td");
     if (key === "isBookRead") {
-        rowData.innerHTML = bookCompletionStatus(value);
+        cellData.innerHTML = bookCompletionStatus(value, cellData);
+        
     } else {
-        rowData.textContent = value;
+        cellData.textContent = value;
     }
-    return rowData;
+    return cellData;
 }
 
 // I want to use check / corss mark to represnt wheater or not a book was read
-function bookCompletionStatus(bool) {
-    return bool ? "&check;" : "&#10060;";
+function bookCompletionStatus(bool, cell) {
+    if(bool) {
+        cell.classList.add("green-text");
+        return "&#10004;";
+    } else {
+        cell.classList.add("red-text");
+        return "&#10005;";
+    }
 }
+
+
+
 
 
 displayBooks();
