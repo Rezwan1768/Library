@@ -6,16 +6,34 @@
 
 body {
     background-color: rgb(224, 176, 224);
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
-    margin: 20px 0;
+    margin-bottom: 5px;
+}
+
+button.add-book {
+    display: block;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 10px;
+    margin: 0 0 10px auto;
+    border-radius: 15px;
+    background-color: rgb(182, 206, 236);
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px rgb(131, 131, 245), -2px -2px 5px rgb(131, 131, 245);
 }
 
 table {
     border-collapse: collapse;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     font-size: 20px;
 }
@@ -28,7 +46,7 @@ th {
 }
 
 .green-text {
-    color: rgb(13, 222, 13);
+    color: rgb(54, 192, 54);
     font-size: 24px;
 }
 
@@ -47,4 +65,100 @@ tbody tr:nth-child(odd) {
 
 tbody tr:nth-child(even) {
     background-color: rgb(231, 219, 219)
+}
+
+tbody tr:hover {
+    background-color: rgb(182, 206, 236);
+    outline: 2px solid rgb(0, 26, 255);
+}
+
+/* Sytles for the Modal */
+.modal {
+    margin: 50px auto 0 auto;
+    width: 50%;
+    padding: 20px 30px;
+    background-color: rgb(182, 206, 236);
+}
+
+form input,
+form label,
+form legend,
+form button {
+    font-family: inherit;
+    font-size: 20px;
+}
+
+input {
+    border: 3px solid black;
+    padding: 5px;
+}
+
+div.form-field > input:hover,
+.pages-field input:hover {
+    box-shadow: 4px 4px 5px rgb(84, 80, 80);
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid rgb(94, 94, 255);
+}
+
+.form-field {
+    margin: 15px 0;
+}
+
+div.form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.form-field label {
+    flex: 0 0 100px;
+}
+
+div.form-field input {
+    flex: auto;
+}
+
+.form-field.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.pages-field label {
+    display: block;
+    margin-left: 2px;
+    margin-bottom: 5px;
+}
+
+.pages-field input {
+    width: 175px;
+}
+
+fieldset {
+    width: 75%;
+    border: none;
+}
+
+fieldset legend {
+    margin-bottom: 5px;
+}
+
+fieldset span {
+    margin-right: 20px;
+}
+
+
+.buttons {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.buttons button {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
 }

@@ -10,20 +10,65 @@
 
 <body>
   <h1>Library</h1>
+  <button type="button" class="add-book">NEW BOOK</button>
   <table>
     <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Author</th>
-      <th scope="col">Pages</th>
-      <th scope="col">Completed Reading</th>
-    </tr>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Pages</th>
+        <th scope="col">Completed Reading</th>
+      </tr>
     </thead>
 
-  <tbody>
-  </tbody>
+    <tbody>
+      <!--Javascript will display the contents of the table-->
+    </tbody>
 
   </table>
+
+  <dialog class="modal">
+    <form method="dialog">
+
+      <div class="form-field">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+
+      <div class="form-field">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+      </div>
+
+      <div class="form-field bottom">
+        <div class="pages-field">
+          <label for="pages">Number of Pages:</label>
+          <input type="number" id="pages" name="pages">
+        </div>
+
+        <fieldset>
+          <legend>Have you finished reading the book?</legend>
+          <span>
+            <input type="radio" id="read" name="completion-status" value="read" 
+            required>
+            <label for="read">Yes</label>
+          </span>
+
+          <span>
+            <input type="radio" id="not-read" name="completion-status" value="not-read" 
+            required>
+            <label for="not-read">No</label>
+          </span>
+        </fieldset>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="add">Add</button>
+        <button type="button" class="cancel">Cancel</button>
+      </div>
+
+    </form>
+  </dialog>
 </body>
 
 </html>
