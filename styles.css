@@ -69,7 +69,7 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: rgb(182, 206, 236);
-    outline: 2px solid rgb(0, 26, 255);
+    /* outline: 2px solid rgb(0, 26, 255); */
 }
 
 /* Sytles for the Modal */
@@ -162,3 +162,23 @@ fieldset span {
     padding: 5px;
     margin: 5px;
 }
+
+.trashcan {
+    width: 30px;
+}
+
+ .transparent {
+    background-color: rgb(224, 176, 224);
+    border: none;
+}
+
+.read-cell {
+    width: 150px;
+}
+
+.toggle {  
+    margin-left: 50px;
+}
+
+
+

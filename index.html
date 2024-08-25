@@ -14,10 +14,12 @@
   <table>
     <thead>
       <tr>
+        <th class="transparent" scope="col"></th>
         <th scope="col">Title</th>
         <th scope="col">Author</th>
         <th scope="col">Pages</th>
-        <th scope="col">Completed Reading</th>
+        <th scope="col">Book Read?</th>
+        <th class="transparent" scope="col"></th>
       </tr>
     </thead>
 
@@ -49,14 +51,12 @@
         <fieldset>
           <legend>Have you finished reading the book?</legend>
           <span>
-            <input type="radio" id="read" name="completion-status" value="read" 
-            required>
+            <input type="radio" id="read" name="completion-status" value="read" required>
             <label for="read">Yes</label>
           </span>
 
           <span>
-            <input type="radio" id="not-read" name="completion-status" value="not-read" 
-            required>
+            <input type="radio" id="not-read" name="completion-status" value="not-read" required>
             <label for="not-read">No</label>
           </span>
         </fieldset>
