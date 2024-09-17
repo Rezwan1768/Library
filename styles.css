@@ -45,6 +45,11 @@ th {
     text-align: center;
 }
 
+tr {
+    height: 50px;
+    
+}
+
 .green-text {
     color: rgb(54, 192, 54);
     font-size: 24px;
@@ -176,9 +181,7 @@ fieldset span {
     width: 150px;
 }
 
-.toggle {  
-    margin-left: 50px;
-}
+
 
 
 
