@@ -162,6 +162,7 @@ const modal = (function () {
     function getFormData(event) {
         event.preventDefault();
 
+        
         const formData = new FormData(event.target);
         const data = validateFormData(formData);
         const newBook = new Book(data.title, data.author, +data.pages,
