@@ -33,7 +33,7 @@ class Book {
     constructor(title, author, pages, isBookRead) {
         this.#title = title;
         this.#author = author;
-        this.#pages = pages;
+        if(pages > 0) this.#pages = pages;
         this.#isBookRead = isBookRead;
     }
 
